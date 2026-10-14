@@ -6,6 +6,7 @@ export interface ProfileData {
   email: string;
   github: string;
   monogram: string;
+  photoUrl?: string;
   directions: string[];
   introduction: string;
   interestTags: string[];
@@ -19,6 +20,7 @@ export const profileData: ProfileData = {
   email: "ekraislamohi.academic@gmail.com",
   github: "https://github.com/ekraislam",
   monogram: "EIO",
+  photoUrl: "/assets/ekra-islam-ohi.jpg",
   directions: [
     "AI/ML Engineering",
     "Research-Oriented Software Development",

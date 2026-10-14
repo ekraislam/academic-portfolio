@@ -68,7 +68,10 @@ export const Hero: React.FC = () => {
 
         {/* Right Column: Profile Frame */}
         <div className="hero-aside">
-          <ProfilePhotoPlaceholder name={profileData.name} />
+          <ProfilePhotoPlaceholder
+            name={profileData.name}
+            photoUrl={profileData.photoUrl}
+          />
         </div>
       </div>
     </section>

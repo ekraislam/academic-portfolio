@@ -3,13 +3,6 @@ import { UserCheck } from "lucide-react";
 import "./ProfilePhotoPlaceholder.css";
 
 interface ProfilePhotoProps {
-  /**
-   * PHOTO REPLACEMENT INSTRUCTION:
-   * To display a genuine photograph:
-   * 1. Place your photo file (e.g., ohi-photo.jpg) into the `public/assets/` folder.
-   * 2. Pass the path here: photoUrl="/assets/ohi-photo.jpg"
-   * If left undefined or null, the tasteful academic monogram placeholder will be rendered.
-   */
   photoUrl?: string | null;
   name?: string;
 }
@@ -20,17 +13,24 @@ export const ProfilePhotoPlaceholder: React.FC<ProfilePhotoProps> = ({
 }) => {
   if (photoUrl) {
     return (
-      <div className="profile-frame">
-        <img
-          src={photoUrl}
-          alt={`Photograph of ${name}`}
-          className="profile-photo"
-          width="260"
-          height="310"
-        />
+      <div className="profile-frame" aria-label={`Academic portrait of ${name}`}>
+        <div className="profile-image-container">
+          <img
+            src={photoUrl}
+            alt={`Academic portrait of ${name}`}
+            className="profile-photo"
+            loading="eager"
+            width="270"
+            height="270"
+          />
+        </div>
         <div className="profile-caption">
-          <span className="profile-caption-name">{name}</span>
-          <span className="profile-caption-sub">CSE • Green University of Bangladesh</span>
+          <div className="profile-caption-status">
+            <UserCheck size={14} className="caption-icon" aria-hidden="true" />
+            <span className="profile-caption-name">{name}</span>
+          </div>
+          <span className="profile-caption-sub">B.Sc. in CSE • Green University of Bangladesh</span>
+          <span className="profile-caption-focus">AI/ML &amp; Systems Engineering</span>
         </div>
       </div>
     );
@@ -49,7 +49,8 @@ export const ProfilePhotoPlaceholder: React.FC<ProfilePhotoProps> = ({
           <UserCheck size={14} className="caption-icon" aria-hidden="true" />
           <span className="profile-caption-name">{name}</span>
         </div>
-        <span className="profile-caption-sub">CSE • Green University of Bangladesh</span>
+        <span className="profile-caption-sub">B.Sc. in CSE • Green University of Bangladesh</span>
+        <span className="profile-caption-focus">AI/ML &amp; Systems Engineering</span>
       </div>
     </div>
   );
