@@ -1,5 +1,5 @@
 /* ==========================================================================
-   About Section Styles - Unified Academic Dossier
+   About Section Styles - Harmonious & Balanced
    ========================================================================== */
 
 .about-grid {
@@ -9,27 +9,28 @@
   align-items: stretch;
 }
 
-/* Left Column: Unified Academic Dossier Card */
-.about-dossier-card {
+/* Left Column: Scholarly Narrative Card */
+.about-narrative-card {
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
+  padding: var(--space-7) var(--space-8);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 1px 3px rgba(20, 43, 69, 0.03);
+  box-shadow: 0 1px 4px rgba(20, 43, 69, 0.03);
   transition: border-color var(--transition-fast);
 }
 
-.about-dossier-card:hover {
+.about-narrative-card:hover {
   border-color: var(--color-border-secondary);
 }
 
-.dossier-narrative {
-  padding: var(--space-7);
+.about-card-header {
+  margin-bottom: var(--space-4);
 }
 
-.dossier-eyebrow {
+.about-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -38,89 +39,25 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-teal);
-  margin-bottom: var(--space-4);
 }
 
-.about-lead-paragraph {
-  font-size: 1.05rem;
+.about-narrative-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-paragraph {
+  font-size: 0.98rem;
   color: var(--color-charcoal);
-  line-height: 1.8;
+  line-height: 1.76;
   margin: 0;
   text-align: left;
 }
 
-.about-lead-paragraph strong {
+.about-paragraph strong {
   color: var(--color-navy);
   font-weight: 600;
-}
-
-/* Integrated Parameters Section (Bottom half of the dossier) */
-.dossier-meta-section {
-  padding: var(--space-5) var(--space-7) var(--space-6);
-  background-color: var(--color-cream-subtle);
-  border-top: 1px solid var(--color-border);
-  border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
-}
-
-.dossier-meta-heading {
-  display: block;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--color-charcoal-muted);
-  margin-bottom: var(--space-3);
-}
-
-.dossier-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4) var(--space-6);
-}
-
-.dossier-meta-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-}
-
-.meta-icon-pill {
-  width: 2rem;
-  height: 2rem;
-  border-radius: var(--radius-xs);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  color: var(--color-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.meta-text-block {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.meta-label {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--color-charcoal-muted);
-  margin-bottom: 2px;
-}
-
-.meta-value {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-navy);
-  line-height: 1.35;
-  white-space: normal;
-  word-break: break-word;
 }
 
 /* Right Column: 3 Pillars */
@@ -175,7 +112,7 @@
 .pillar-desc {
   font-size: var(--text-sm);
   color: var(--color-charcoal-muted);
-  line-height: var(--leading-normal);
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -185,19 +122,8 @@
     grid-template-columns: 1fr;
     gap: var(--space-6);
   }
-}
 
-@media (max-width: 600px) {
-  .dossier-meta-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
-
-  .dossier-narrative {
-    padding: var(--space-5);
-  }
-
-  .dossier-meta-section {
-    padding: var(--space-4) var(--space-5) var(--space-5);
+  .about-narrative-card {
+    padding: var(--space-6);
   }
 }
