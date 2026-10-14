@@ -23,8 +23,8 @@ export const profileData: ProfileData = {
   github: "https://github.com/ekraislam",
   linkedin: "https://www.linkedin.com/in/ekra-islam-ohi",
   monogram: "EIO",
-  photoUrl: "/assets/ekra-islam-ohi.jpg",
-  cvUrl: "/assets/Ekra_Islam_Ohi_Academic_CV.pdf",
+  photoUrl: "./assets/ekra-islam-ohi.jpg",
+  cvUrl: "./assets/Ekra_Islam_Ohi_Academic_CV.pdf",
   directions: [
     "AI/ML & Systems Engineering",
     "Evidence Grounding & NLP Reliability",
