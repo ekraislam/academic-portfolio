@@ -4,7 +4,7 @@ import { GithubIcon } from "./GithubIcon";
 import { profileData } from "../data/profile";
 import "./Footer.css";
 
-const CURRENT_YEAR = new Date().getFullYear();
+const CURRENT_YEAR = 2025;
 
 export const Footer: React.FC = () => {
 
@@ -56,10 +56,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Tier */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            &copy; {CURRENT_YEAR} {profileData.name}. All rights reserved. Designed for academic and research presentation.
-          </p>
-          <p className="footer-meta">
-            Semantic HTML5 • Accessible High-Contrast Palette • Static Content
+            &copy; {CURRENT_YEAR} {profileData.name}. All rights reserved.
           </p>
         </div>
       </div>

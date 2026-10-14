@@ -104,7 +104,7 @@ export const EducationCV: React.FC = () => {
             </div>
 
             <div className="cv-note">
-              <span>Updated for 2025–2026 international graduate study &amp; engineering applications.</span>
+              <span>Updated for 2025 academic &amp; professional applications.</span>
             </div>
           </div>
         </div>

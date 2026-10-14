@@ -203,12 +203,6 @@ export const FeaturedProjects: React.FC = () => {
 
                 <p className="project-card-description">{project.description}</p>
 
-                {project.notes && (
-                  <div className="project-card-note">
-                    <span className="note-label">Repository Note:</span> {project.notes}
-                  </div>
-                )}
-
                 <div className="project-card-footer">
                   <div className="project-tech-tags" aria-label="Technologies used">
                     {project.technologies.map((tech) => (
@@ -239,27 +233,6 @@ export const FeaturedProjects: React.FC = () => {
             </button>
           </div>
         )}
-
-        {/* Global Catalog Footer */}
-        <div className="projects-preview-footer">
-          <div className="projects-footer-card">
-            <FolderGit2 size={20} className="footer-card-icon" aria-hidden="true" />
-            <div className="footer-card-text">
-              <p>
-                <strong>Full Source Code Catalog:</strong> All 13 projects above are maintained in public repositories. You can inspect commit histories, issues, and documentation directly on GitHub.
-              </p>
-            </div>
-            <a
-              href="https://github.com/ekraislam?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary projects-footer-btn"
-            >
-              <span>GitHub Profile Repositories</span>
-              <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

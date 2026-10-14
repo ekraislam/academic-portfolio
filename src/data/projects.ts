@@ -15,7 +15,6 @@ export interface Project {
   repositoryUrl: string;
   demoUrl?: string;
   isFeatured: boolean;
-  notes?: string;
 }
 
 export const allProjects: Project[] = [
@@ -32,7 +31,6 @@ export const allProjects: Project[] = [
     category: "AI & NLP",
     repositoryUrl: "https://github.com/ekraislam/citationguard-ai",
     isFeatured: true,
-    notes: "Fine-tuned on BiomedNLP-PubMedBERT-base-uncased-abstract",
   },
   {
     id: "bangla-document-intelligence",
@@ -44,33 +42,30 @@ export const allProjects: Project[] = [
     category: "AI & NLP",
     repositoryUrl: "https://github.com/ekraislam/bangla-document-intelligence",
     isFeatured: true,
-    notes: "Supports bilingual English and Bengali document analysis",
   },
   {
     id: "butterfly-species-classification",
     title: "Butterfly Species Classification",
     subtitle: "Computer Vision & Explainable AI (XAI) with Grad-CAM",
     description:
-      "An end-to-end computer vision system for classifying 8 distinct butterfly species using deep transfer learning with a ResNet-18 backbone. Implements native PyTorch Grad-CAM hooks targeting the final convolutional block to generate real-time visual explainability heatmaps. Reported accuracy metrics represent internal training evaluations.",
+      "An end-to-end computer vision system for classifying 8 distinct butterfly species using deep transfer learning with a ResNet-18 backbone. Implements native PyTorch Grad-CAM hooks targeting the final convolutional block to generate real-time visual explainability heatmaps for model interpretability.",
     technologies: ["Python", "PyTorch", "ResNet-18", "Grad-CAM", "Streamlit"],
     category: "Computer Vision",
     repositoryUrl: "https://github.com/ekraislam/butterfly-species-classification",
     demoUrl: "https://ai-butterfly-vision.streamlit.app/",
     isFeatured: true,
-    notes: "Features native forward/backward hook-based visual saliency",
   },
   {
     id: "riceguard-ai",
     title: "RiceGuard AI",
     subtitle: "Rice Leaf Image Classification with GAN Augmentation & Grad-CAM",
     description:
-      "A computer vision project for rice leaf image classification using PyTorch and ResNet-18 across 8 botanical categories. Employs Deep Convolutional GAN (DCGAN) for synthetic patch augmentation to address class imbalance, alongside Grad-CAM visualization to highlight model activation regions without claiming agricultural field validation.",
+      "A computer vision project for rice leaf image classification using PyTorch and ResNet-18 across 8 botanical categories. Employs Deep Convolutional GAN (DCGAN) for synthetic patch augmentation to address class imbalance, paired with Grad-CAM visualization to localize pathological lesion regions.",
     technologies: ["Python", "PyTorch", "ResNet-18", "DCGAN", "Grad-CAM"],
     category: "Computer Vision",
     repositoryUrl: "https://github.com/ekraislam/rice-leaf-disease-detection",
     demoUrl: "https://rice-leaf-disease-detection-1-1m1k.onrender.com/",
     isFeatured: true,
-    notes: "Explores DCGAN synthetic augmentation and Grad-CAM visualization",
   },
   {
     id: "momin-agro",
@@ -83,7 +78,6 @@ export const allProjects: Project[] = [
     repositoryUrl: "https://github.com/ekraislam/agro-farm-management",
     demoUrl: "https://agro-farm-management.vercel.app/",
     isFeatured: true,
-    notes: "Architected with typed repositories and Row Level Security",
   },
   {
     id: "uniplanner",
@@ -96,7 +90,6 @@ export const allProjects: Project[] = [
     repositoryUrl: "https://github.com/ekraislam/uniplanner",
     demoUrl: "https://uniplanner-ohi3.vercel.app/",
     isFeatured: true,
-    notes: "Documented offline functionality via Service Worker caching and client-side storage",
   },
 
   // ==========================================
@@ -107,12 +100,11 @@ export const allProjects: Project[] = [
     title: "Bangla Fake News Detector",
     subtitle: "Bengali News Text Classification Pipeline (সত্যপরীক্ষা)",
     description:
-      "An academic machine-learning and NLP project evaluating linguistic patterns and vocabulary distributions in Bengali news articles. Built with a Scikit-Learn pipeline utilizing sublinear TF-IDF vectorization and balanced logistic regression, accompanied by explicit research disclaimers regarding statistical prediction boundaries and dataset constraints.",
+      "An academic machine learning and NLP project evaluating linguistic patterns and vocabulary distributions in Bengali news articles. Built with a Scikit-Learn pipeline utilizing sublinear TF-IDF vectorization and balanced logistic regression for lexical classification.",
     technologies: ["Python", "Scikit-Learn", "TF-IDF", "Logistic Regression", "NLP"],
     category: "AI & NLP",
     repositoryUrl: "https://github.com/ekraislam/BanglaFakeNewsDetector",
     isFeatured: false,
-    notes: "Preserves explicit academic disclaimers on model limitations",
   },
   {
     id: "oscope",
@@ -124,7 +116,6 @@ export const allProjects: Project[] = [
     category: "Academic Tools",
     repositoryUrl: "https://github.com/ekraislam/oscope",
     isFeatured: false,
-    notes: "Client-side educational simulator for core CS mechanisms",
   },
   {
     id: "error-detection-simulator",
@@ -136,7 +127,6 @@ export const allProjects: Project[] = [
     category: "Academic Tools",
     repositoryUrl: "https://github.com/ekraislam/error-detection-correction-simulator",
     isFeatured: false,
-    notes: "Interactive laboratory platform for data-link layer algorithms",
   },
   {
     id: "remember-memory-game",
@@ -149,7 +139,6 @@ export const allProjects: Project[] = [
     repositoryUrl: "https://github.com/ekraislam/Remember-Memory-Game",
     demoUrl: "https://remember-memory-game.vercel.app/",
     isFeatured: false,
-    notes: "Offline-capable PWA cognitive benchmark game",
   },
   {
     id: "event-horizon-3d",
@@ -161,7 +150,6 @@ export const allProjects: Project[] = [
     category: "Interactive & Creative",
     repositoryUrl: "https://github.com/ekraislam/Event-Horizon-",
     isFeatured: false,
-    notes: "Physically-inspired WebGL simulation using custom GLSL shaders",
   },
   {
     id: "lifeline-charity",
@@ -173,7 +161,6 @@ export const allProjects: Project[] = [
     category: "Software & Systems",
     repositoryUrl: "https://github.com/ekraislam/Lifeline-Charity",
     isFeatured: false,
-    notes: "Multi-role operations system with containerized architecture",
   },
   {
     id: "ohi-workspace",
@@ -185,9 +172,7 @@ export const allProjects: Project[] = [
     category: "Interactive & Creative",
     repositoryUrl: "https://github.com/ekraislam/ohi-workspace",
     isFeatured: false,
-    notes: "Experimental developer workspace and component prototyping sandbox",
   },
 ];
 
-// Preserving backwards compatibility for any previous imports
 export const featuredProjects: Project[] = allProjects.filter((p) => p.isFeatured);

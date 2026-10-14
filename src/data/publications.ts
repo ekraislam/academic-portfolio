@@ -19,8 +19,8 @@ export const publicationsData: Publication[] = [
     title:
       "Explainable Deep Transfer Learning and Generative Augmentation for Rice Leaf Disease Classification",
     authors: ["Ekra Islam Ohi", "Faculty Advisors & Research Collaborators"],
-    venue: "Academic Conference Submission (Under Faculty Review)",
-    year: "2025 – 2026",
+    venue: "Academic Conference Submission (Faculty Supervised)",
+    year: "2025",
     status: "Under Review",
     statusBadge: "Conference Manuscript • In Peer Review Process",
     abstract:
@@ -35,7 +35,7 @@ export const publicationsData: Publication[] = [
     ],
     repositoryUrl: "https://github.com/ekraislam/rice-leaf-disease-detection",
     demoUrl: "https://rice-leaf-disease-detection-1-1m1k.onrender.com/",
-    notes: "Paper drafted and submitted for conference evaluation under faculty supervision; currently processing.",
+    notes: "Drafted under faculty supervision; currently submitted for conference review.",
   },
   {
     id: "citationguard-working-paper",
