@@ -1,0 +1,202 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3624 >>
+stream
+BT
+/F2 20 Tf
+50 740 Td
+(EKRA ISLAM OHI) Tj
+ET
+BT
+/F1 9 Tf
+50 722 Td
+(Dhaka, Bangladesh | Email: ekraislamohi.academic@gmail.com | GitHub: github.com/ekraislam) Tj
+ET
+0.5 w
+0.1 0.2 0.3 RG
+50 712 m
+562 712 l
+S
+BT
+/F2 12 Tf
+50 694 Td
+(EDUCATION) Tj
+ET
+BT
+/F2 10 Tf
+50 678 Td
+(Green University of Bangladesh) Tj
+360 0 Td
+(Dhaka, Bangladesh) Tj
+ET
+BT
+/F1 9 Tf
+50 664 Td
+(Bachelor of Science in Computer Science and Engineering | Period: 2022 - 2026 Expected) Tj
+ET
+BT
+/F1 8.5 Tf
+50 651 Td
+(Relevant Coursework: Data Structures & Algorithms, Machine Learning, Operating Systems, DBMS, OOP) Tj
+ET
+BT
+/F2 12 Tf
+50 630 Td
+(RESEARCH & PUBLICATIONS) Tj
+ET
+BT
+/F2 9.5 Tf
+50 614 Td
+(Explainable Deep Transfer Learning and Generative Augmentation for Rice Leaf Disease Classification) Tj
+ET
+BT
+/F1 8.5 Tf
+50 601 Td
+(Ekra Islam Ohi, et al. | Conference Manuscript Submission (Under Peer Review, 2025-2026)) Tj
+ET
+BT
+/F1 8.5 Tf
+50 589 Td
+(- Evaluated ResNet-18 architectures with DCGAN synthetic patch generation to resolve botanical class imbalance.) Tj
+ET
+BT
+/F1 8.5 Tf
+50 578 Td
+(- Integrated Grad-CAM saliency mapping to provide transparent, interpretable visual evidence for disease localization.) Tj
+ET
+BT
+/F2 12 Tf
+50 557 Td
+(SELECTED PROJECTS & RESEARCH SYSTEMS) Tj
+ET
+BT
+/F2 9.5 Tf
+50 541 Td
+(CitationGuard AI - Evidence-Aware Citation Verification System) Tj
+320 0 Td
+(Python, PyTorch, PubMedBERT) Tj
+ET
+BT
+/F1 8.5 Tf
+50 529 Td
+(- Built automated stance verification pipeline evaluating claim grounding against scientific literature under context isolation.) Tj
+ET
+BT
+/F2 9.5 Tf
+50 511 Td
+(Bangla Document Intelligence - OCR Pipeline & In-Memory Search Engine) Tj
+285 0 Td
+(Python, EasyOCR, PyMuPDF, Docker) Tj
+ET
+BT
+/F1 8.5 Tf
+50 499 Td
+(- Designed high-throughput bilingual PDF OCR engine with instant in-memory text search and containerized deployment.) Tj
+ET
+BT
+/F2 9.5 Tf
+50 481 Td
+(Butterfly Species Classification & XAI with Grad-CAM) Tj
+330 0 Td
+(PyTorch, ResNet-18, Streamlit) Tj
+ET
+BT
+/F1 8.5 Tf
+50 469 Td
+(- Implemented end-to-end computer vision classifier with native PyTorch hooks for real-time visual explainability heatmaps.) Tj
+ET
+BT
+/F2 9.5 Tf
+50 451 Td
+(Momin Agro - Smart Dairy & Biogas Management System) Tj
+320 0 Td
+(React, TypeScript, Supabase, RLS) Tj
+ET
+BT
+/F1 8.5 Tf
+50 439 Td
+(- Developed production-ready operational management PWA with PostgreSQL Row Level Security and cattle profiling.) Tj
+ET
+BT
+/F2 9.5 Tf
+50 421 Td
+(UniPlanner - Academic Course & GPA Forecasting PWA) Tj
+315 0 Td
+(TypeScript, React, PWA, Service Worker) Tj
+ET
+BT
+/F1 8.5 Tf
+50 409 Td
+(- Created offline-first progressive web app with Service Worker caching and Bangladesh UGC/US 4.0 grading support.) Tj
+ET
+BT
+/F2 12 Tf
+50 387 Td
+(TECHNICAL COMPETENCIES) Tj
+ET
+BT
+/F1 8.5 Tf
+50 371 Td
+(Programming Languages: Python, C, C++, TypeScript, JavaScript, SQL) Tj
+ET
+BT
+/F1 8.5 Tf
+50 359 Td
+(AI & Machine Learning: PyTorch, Hugging Face Transformers, Scikit-Learn, OpenCV, Grad-CAM, DCGAN, BERT) Tj
+ET
+BT
+/F1 8.5 Tf
+50 347 Td
+(Tools & Engineering: Docker, Git & GitHub, Linux/Bash, React, Node.js/Fastify, PostgreSQL, Supabase, Vite, PWA) Tj
+ET
+BT
+/F1 8.5 Tf
+50 335 Td
+(Research Methods: Context Isolation, Stance Detection, OCR Pipelines, Saliency Mapping, Empirical Evaluation) Tj
+ET
+BT
+/F2 12 Tf
+50 313 Td
+(ACADEMIC INTERESTS & FUTURE OBJECTIVES) Tj
+ET
+BT
+/F1 8.5 Tf
+50 297 Td
+(Focused on Machine Learning Reliability, Natural Language Processing, and Human-Centered AI Systems.) Tj
+ET
+BT
+/F1 8.5 Tf
+50 285 Td
+(Actively preparing for international graduate studies (M.S. / Ph.D.) and research-driven software engineering roles.) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4072
+%%EOF

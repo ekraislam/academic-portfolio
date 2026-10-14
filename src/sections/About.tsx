@@ -10,22 +10,22 @@ export const About: React.FC = () => {
       <div className="container">
         <SectionHeading
           id="about-title"
-          label="Background &amp; Motivation"
+          label="Background &amp; Academic Trajectory"
           title="About Me"
-          lead="Academic foundation, intellectual curiosity, and long-term research direction."
+          lead="Academic foundations, technical exploration, and research preparation."
         />
 
         <div className="about-grid">
           {/* Main Narrative Column */}
           <div className="about-text-column">
             <p className="about-paragraph">
-              I am an undergraduate student pursuing a Bachelor of Science in Computer Science and Engineering at {profileData.institution}. My academic training centers on building a solid foundation in algorithms, computing principles, and software engineering methodologies.
+              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2026). My coursework combines core algorithmic foundations—including Data Structures, Operating Systems, and Machine Learning—with extensive hands-on software development across Python, TypeScript, and C++.
             </p>
             <p className="about-paragraph">
-              My technical interests are grounded in understanding how computational models can be made more reliable, interpretable, and practically useful. I am particularly drawn to challenges in Natural Language Processing—such as verifiable citation attribution and evidence evaluation—as well as Explainable Computer Vision and offline-first software systems.
+              My research interests lie at the intersection of Empirical Machine Learning Reliability and Applied Systems. In computer vision, I have investigated deep transfer learning paired with generative patch augmentation (DCGAN) and explainable activation mapping (Grad-CAM) for plant disease diagnosis—work currently submitted for conference evaluation. In NLP, I focus on evidence-aware stance detection and citation verification under context-isolation protocols to mitigate hallucinations in scientific synthesis.
             </p>
             <p className="about-paragraph">
-              Looking forward, my objective is to bridge rigorous software development with systematic academic research, preparing for international higher studies where I can contribute to dependable artificial intelligence and human-centered computational tools.
+              Looking toward the future, I am actively preparing for international graduate studies (M.S./Ph.D.) and research-driven software engineering roles. My goal is to contribute to robust, interpretable intelligent systems that provide transparent, empirically grounded solutions to complex domain challenges.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export const About: React.FC = () => {
               <div>
                 <h3 className="pillar-title">Academic Foundations</h3>
                 <p className="pillar-desc">
-                  Focused study in Computer Science and Engineering at {profileData.institution}, combining theoretical fundamentals with hands-on systems implementation.
+                  Rigorous CSE undergraduate curriculum at {profileData.institution}, balancing theoretical algorithms with systems engineering and reproducible experimentation.
                 </p>
               </div>
             </div>
@@ -48,9 +48,9 @@ export const About: React.FC = () => {
                 <Compass size={20} aria-hidden="true" />
               </div>
               <div>
-                <h3 className="pillar-title">Research Curiosity</h3>
+                <h3 className="pillar-title">Empirical Research</h3>
                 <p className="pillar-desc">
-                  Exploring reliability, stance verification, and hallucination reduction in LLM-assisted knowledge synthesis, alongside explainable vision architectures.
+                  Active inquiries across explainable computer vision (Grad-CAM), class-imbalance generative modeling, and evidence-grounded citation stance classification.
                 </p>
               </div>
             </div>
@@ -60,9 +60,9 @@ export const About: React.FC = () => {
                 <Target size={20} aria-hidden="true" />
               </div>
               <div>
-                <h3 className="pillar-title">Future Trajectory</h3>
+                <h3 className="pillar-title">Graduate Trajectory</h3>
                 <p className="pillar-desc">
-                  Preparing for international graduate studies and research-oriented engineering roles dedicated to responsible, empirically grounded intelligent systems.
+                  Focused on pursuing international graduate research programs dedicated to dependable artificial intelligence, natural language reliability, and applied computing.
                 </p>
               </div>
             </div>

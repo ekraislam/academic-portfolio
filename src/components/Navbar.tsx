@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Mail, Menu, X, ArrowUpRight } from "lucide-react";
+import { Mail, Menu, X, ArrowUpRight, FileDown } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { profileData } from "../data/profile";
 import "./Navbar.css";
@@ -22,8 +22,9 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { label: "About", href: "#about" },
     { label: "Research", href: "#research" },
-    { label: "Publications", href: "#publications" },
+    { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
+    { label: "Publications", href: "#publications" },
     { label: "Education", href: "#education" },
     { label: "Contact", href: "#contact" },
   ];
@@ -34,7 +35,7 @@ export const Navbar: React.FC = () => {
         {/* Brand */}
         <a href="#main-content" className="header-brand" aria-label="Ekra Islam Ohi Home">
           <span className="brand-name">{profileData.name}</span>
-          <span className="brand-tag">Academic & Research Portfolio</span>
+          <span className="brand-tag">Academic &amp; Research Portfolio</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -52,6 +53,18 @@ export const Navbar: React.FC = () => {
 
         {/* Quick Actions (Desktop) */}
         <div className="header-actions">
+          {profileData.cvUrl && (
+            <a
+              href={profileData.cvUrl}
+              download="Ekra_Islam_Ohi_Academic_CV.pdf"
+              className="action-icon-link"
+              aria-label="Download Academic CV (PDF)"
+              title="Download Academic CV"
+            >
+              <FileDown size={16} aria-hidden="true" />
+              <span className="action-text">CV (PDF)</span>
+            </a>
+          )}
           <a
             href={profileData.github}
             target="_blank"
@@ -107,6 +120,17 @@ export const Navbar: React.FC = () => {
             </ul>
           </nav>
           <div className="mobile-drawer-footer">
+            {profileData.cvUrl && (
+              <a
+                href={profileData.cvUrl}
+                download="Ekra_Islam_Ohi_Academic_CV.pdf"
+                className="btn btn-secondary mobile-footer-btn"
+                onClick={closeMenu}
+              >
+                <FileDown size={16} aria-hidden="true" />
+                <span>Download Academic CV (PDF)</span>
+              </a>
+            )}
             <a
               href={profileData.github}
               target="_blank"

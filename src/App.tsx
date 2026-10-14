@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./sections/Hero";
 import { About } from "./sections/About";
 import { ResearchInterests } from "./sections/ResearchInterests";
+import { TechnicalSkills } from "./sections/TechnicalSkills";
 import { FeaturedProjects } from "./sections/FeaturedProjects";
 import { PublicationsPreview } from "./sections/PublicationsPreview";
 import { EducationCV } from "./sections/EducationCV";
@@ -25,6 +26,7 @@ export const App: React.FC = () => {
         <Hero />
         <About />
         <ResearchInterests />
+        <TechnicalSkills />
         <FeaturedProjects />
         <PublicationsPreview />
         <EducationCV />

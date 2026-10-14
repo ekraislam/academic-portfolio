@@ -12,7 +12,7 @@ export const ResearchInterests: React.FC = () => {
           id="research-title"
           label="Scholarly Interests"
           title="Research &amp; Exploration Areas"
-          lead="These represent core academic domains and technical questions of interest. They reflect ongoing intellectual curiosity and project exploration rather than claims of formal publication."
+          lead="Core research questions, theoretical foundations, and ongoing experimental inquiries across artificial intelligence, language reliability, and applied computing."
         />
 
         <div className="research-grid">

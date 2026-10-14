@@ -18,11 +18,21 @@ export const Footer: React.FC = () => {
             <span className="footer-affiliation">{profileData.affiliation}</span>
             <div className="footer-integrity-badge">
               <ShieldCheck size={14} className="integrity-icon" aria-hidden="true" />
-              <span>Project descriptions are based on available repository documentation.</span>
+              <span>Academic &amp; Research Portfolio • Green University of Bangladesh</span>
             </div>
           </div>
 
           <div className="footer-links-group">
+            {profileData.cvUrl && (
+              <a
+                href={profileData.cvUrl}
+                download="Ekra_Islam_Ohi_Academic_CV.pdf"
+                className="footer-link"
+                title="Download Academic CV (PDF)"
+              >
+                <span>Curriculum Vitae</span>
+              </a>
+            )}
             <a
               href={profileData.github}
               target="_blank"

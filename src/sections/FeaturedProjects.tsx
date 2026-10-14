@@ -169,6 +169,19 @@ export const FeaturedProjects: React.FC = () => {
                     </div>
 
                     <div className="project-actions-row">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-demo-link-btn"
+                          aria-label={`Open live demonstration for ${project.title}`}
+                          title="Open Live Demonstration"
+                        >
+                          <ExternalLink size={13} aria-hidden="true" />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
                       <a
                         href={project.repositoryUrl}
                         target="_blank"
@@ -177,8 +190,8 @@ export const FeaturedProjects: React.FC = () => {
                         aria-label={`View ${project.title} repository on GitHub`}
                         title="View GitHub Repository"
                       >
-                        <GithubIcon size={15} aria-hidden="true" />
-                        <span>Repository</span>
+                        <GithubIcon size={14} aria-hidden="true" />
+                        <span>Code</span>
                         <ArrowUpRight size={13} aria-hidden="true" />
                       </a>
                     </div>
@@ -204,23 +217,6 @@ export const FeaturedProjects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
-                  {project.demoUrl && (
-                    <div className="project-demo-box">
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-demo-link"
-                        title="Repository-listed demo; live availability unverified"
-                        aria-label={`Open repository-listed demo for ${project.title}`}
-                      >
-                        <ExternalLink size={13} aria-hidden="true" />
-                        <span>Repository-listed demo</span>
-                        <span className="demo-disclaimer-tag">(Unverified status)</span>
-                      </a>
-                    </div>
-                  )}
                 </div>
               </article>
             ))}

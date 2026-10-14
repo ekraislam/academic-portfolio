@@ -127,7 +127,7 @@ export const Contact: React.FC = () => {
               <li>Expected timeline or preliminary proposal notes</li>
             </ul>
             <div className="aside-disclaimer">
-              <span>Notice: Additional professional and academic profiles (such as LinkedIn or ORCID) will be added upon confirmation.</span>
+              <span>Primary academic correspondence channel is via email. Responses are typically provided within 24–48 hours.</span>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, Code2, Mail, GraduationCap } from "lucide-react";
+import { ArrowDown, Code2, Mail, GraduationCap, Download } from "lucide-react";
 import { profileData } from "../data/profile";
 import { ProfilePhotoPlaceholder } from "../components/ProfilePhotoPlaceholder";
 import "./Hero.css";
@@ -55,6 +55,17 @@ export const Hero: React.FC = () => {
               <ArrowDown size={16} aria-hidden="true" />
               <span>Explore Research</span>
             </a>
+            {profileData.cvUrl && (
+              <a
+                href={profileData.cvUrl}
+                download="Ekra_Islam_Ohi_Academic_CV.pdf"
+                className="btn btn-secondary"
+                title="Download Academic Curriculum Vitae (PDF)"
+              >
+                <Download size={16} aria-hidden="true" />
+                <span>Download CV</span>
+              </a>
+            )}
             <a href="#projects" className="btn btn-secondary">
               <Code2 size={16} aria-hidden="true" />
               <span>View Projects</span>

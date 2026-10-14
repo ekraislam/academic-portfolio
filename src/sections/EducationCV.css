@@ -43,8 +43,21 @@
 .education-status-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-3);
   margin-bottom: var(--space-3);
+}
+
+.education-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-teal);
+  background-color: rgba(47, 111, 104, 0.08);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
 }
 
 .education-location {
@@ -73,6 +86,42 @@
   font-size: var(--text-sm);
   color: var(--color-charcoal);
   line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* Coursework */
+.education-coursework {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.coursework-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.coursework-icon {
+  color: var(--color-teal);
+}
+
+.coursework-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.coursework-tag {
+  font-size: 0.72rem;
+  color: var(--color-charcoal);
+  background-color: #f7f6f2;
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
 }
 
 /* CV Card */
@@ -120,7 +169,19 @@
   font-size: var(--text-sm);
   color: var(--color-charcoal);
   line-height: var(--leading-normal);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.cv-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.cv-action-btn {
+  width: 100%;
+  justify-content: center;
 }
 
 .cv-note {
@@ -130,12 +191,8 @@
   background-color: var(--color-cream-subtle);
   padding: var(--space-3);
   border-radius: var(--radius-xs);
-  margin-bottom: var(--space-5);
   border: 1px dashed var(--color-border-secondary);
-}
-
-.cv-action-btn {
-  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 860px) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { GraduationCap, FileCheck, Mail, MapPin } from "lucide-react";
+import { GraduationCap, FileCheck, Mail, MapPin, Calendar, Download, BookOpen } from "lucide-react";
 import { SectionHeading } from "../components/SectionHeading";
 import { educationData } from "../data/education";
 import { profileData } from "../data/profile";
@@ -11,9 +11,9 @@ export const EducationCV: React.FC = () => {
       <div className="container">
         <SectionHeading
           id="education-title"
-          label="Academic Qualifications"
+          label="Academic Qualifications &amp; Credentials"
           title="Education &amp; Curriculum Vitae"
-          lead="Verified academic enrollment and formal credentials."
+          lead="Verified academic enrollment, expected timeline, coursework, and formal credentials."
         />
 
         <div className="education-grid">
@@ -29,6 +29,10 @@ export const EducationCV: React.FC = () => {
                     <span className="academic-badge academic-badge--primary">
                       {edu.status}
                     </span>
+                    <span className="education-timeline-badge">
+                      <Calendar size={12} aria-hidden="true" />
+                      <span>{edu.period}</span>
+                    </span>
                     <span className="education-location">
                       <MapPin size={12} aria-hidden="true" />
                       <span>{edu.location}</span>
@@ -39,12 +43,29 @@ export const EducationCV: React.FC = () => {
                   </h3>
                   <p className="education-institution">{edu.institution}</p>
                   <p className="education-description">{edu.description}</p>
+
+                  {/* Coursework */}
+                  {edu.relevantCoursework && edu.relevantCoursework.length > 0 && (
+                    <div className="education-coursework">
+                      <div className="coursework-heading">
+                        <BookOpen size={14} className="coursework-icon" aria-hidden="true" />
+                        <span>Core Computer Science &amp; Engineering Coursework:</span>
+                      </div>
+                      <div className="coursework-tags-list">
+                        {edu.relevantCoursework.map((course) => (
+                          <span key={course} className="coursework-tag">
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Right Column: Curriculum Vitae Status & Request */}
+          {/* Right Column: Curriculum Vitae Status & Download */}
           <div className="cv-card">
             <div className="cv-card-header">
               <div className="cv-icon-box">
@@ -52,25 +73,39 @@ export const EducationCV: React.FC = () => {
               </div>
               <div>
                 <h3 className="cv-title">Curriculum Vitae</h3>
-                <span className="cv-status">Available Upon Request</span>
+                <span className="cv-status">Available for Direct Download</span>
               </div>
             </div>
 
             <p className="cv-text">
-              Academic background, project summaries, and technical competencies can be provided upon direct request.
+              Comprehensive overview of academic coursework, working manuscripts, research pipelines, technical proficiencies, and project repositories.
             </p>
 
-            <div className="cv-note">
-              <span>Please direct inquiries regarding academic records and credentials via email.</span>
+            <div className="cv-actions-group">
+              {profileData.cvUrl && (
+                <a
+                  href={profileData.cvUrl}
+                  download="Ekra_Islam_Ohi_Academic_CV.pdf"
+                  className="btn btn-primary cv-action-btn"
+                  title="Download Academic CV as PDF"
+                >
+                  <Download size={16} aria-hidden="true" />
+                  <span>Download Academic CV (PDF)</span>
+                </a>
+              )}
+
+              <a
+                href={`mailto:${profileData.email}?subject=Academic%20Dossier%20Inquiry%20%E2%80%94%20Ekra%20Islam%20Ohi`}
+                className="btn btn-secondary cv-action-btn"
+              >
+                <Mail size={16} aria-hidden="true" />
+                <span>Request Detailed Dossier via Email</span>
+              </a>
             </div>
 
-            <a
-              href={`mailto:${profileData.email}?subject=Academic%20CV%20Inquiry%20%E2%80%94%20Ekra%20Islam%20Ohi`}
-              className="btn btn-primary cv-action-btn"
-            >
-              <Mail size={16} aria-hidden="true" />
-              <span>Request Academic CV via Email</span>
-            </a>
+            <div className="cv-note">
+              <span>Updated for 2025–2026 international graduate study &amp; engineering applications.</span>
+            </div>
           </div>
         </div>
       </div>
