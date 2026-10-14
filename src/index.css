@@ -13,9 +13,9 @@
   --color-cream: #F7F5EF;
   --color-cream-card: #FFFFFF;
   --color-cream-subtle: #F3EFE6;
-  --color-charcoal: #292D32;
-  --color-charcoal-muted: #525960;
-  --color-charcoal-light: #717882;
+  --color-charcoal: #1d232a;
+  --color-charcoal-muted: #4a535e;
+  --color-charcoal-light: #6a7480;
   --color-border: #E2DFD7;
   --color-border-secondary: #D5D1C6;
   --color-white: #FFFFFF;
@@ -25,23 +25,23 @@
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Type Scale */
-  --text-xs: 0.75rem;       /* 12px */
-  --text-sm: 0.875rem;      /* 14px */
-  --text-base: 1rem;         /* 16px */
-  --text-md: 1.0625rem;     /* 17px */
-  --text-lg: 1.125rem;      /* 18px */
-  --text-xl: 1.25rem;       /* 20px */
-  --text-2xl: 1.5rem;       /* 24px */
-  --text-3xl: 1.875rem;     /* 30px */
-  --text-4xl: 2.25rem;      /* 36px */
-  --text-5xl: 2.75rem;      /* 44px */
+  /* Type Scale (Calibrated for effortless academic readability) */
+  --text-xs: 0.8125rem;     /* ~13.4px */
+  --text-sm: 0.9375rem;     /* ~15.5px */
+  --text-base: 1.0625rem;   /* ~17.5px */
+  --text-md: 1.15rem;       /* ~19px */
+  --text-lg: 1.25rem;       /* ~20.6px */
+  --text-xl: 1.4rem;        /* ~23px */
+  --text-2xl: 1.65rem;      /* ~27px */
+  --text-3xl: 2.125rem;     /* ~35px */
+  --text-4xl: 2.5rem;       /* ~41px */
+  --text-5xl: 3.125rem;     /* ~51px */
 
   /* Line Heights */
   --leading-tight: 1.25;
-  --leading-snug: 1.4;
-  --leading-normal: 1.6;
-  --leading-relaxed: 1.75;
+  --leading-snug: 1.42;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.8;
 
   /* Spacing Scale */
   --space-1: 0.25rem;
@@ -58,15 +58,15 @@
   --space-24: 6rem;
 
   /* Container & Layout */
-  --container-max: 1120px;
-  --container-narrow: 840px;
-  --content-max-width: 68ch;
+  --container-max: 1240px;
+  --container-narrow: 880px;
+  --content-max-width: 72ch;
 
   /* Component Borders & Radii */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  --radius-xs: 3px;
+  --radius-sm: 5px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -84,9 +84,9 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 16.5px;
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -344,6 +344,10 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
+  html {
+    font-size: 15.5px;
+  }
+
   :root {
     --space-16: 3rem;
     --space-20: 3.5rem;

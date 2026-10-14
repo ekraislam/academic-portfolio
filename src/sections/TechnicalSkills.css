@@ -67,9 +67,9 @@
 }
 
 .skill-category-desc {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--color-charcoal-muted);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .skill-tags-list {
@@ -81,13 +81,13 @@
 .skill-tag {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: var(--text-xs);
+  gap: 6px;
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--color-charcoal);
   background-color: #f6f7f9;
   border: 1px solid var(--color-border);
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: var(--radius-sm);
   transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
