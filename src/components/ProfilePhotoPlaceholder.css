@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Profile Photo / Monogram Placeholder Styles
+   ========================================================================== */
+
+.profile-frame {
+  width: 100%;
+  max-width: 270px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: 0 4px 16px rgba(20, 43, 69, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: border-color var(--transition-fast);
+}
+
+.profile-frame:hover {
+  border-color: var(--color-border-secondary);
+}
+
+.monogram-box {
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  background: linear-gradient(145deg, #183352 0%, #142B45 100%);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.monogram-box::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(247, 245, 239, 0.15);
+  border-radius: calc(var(--radius-sm) - 2px);
+  pointer-events: none;
+}
+
+.monogram-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.monogram-initials {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  letter-spacing: 0.12em;
+  text-indent: 0.12em; /* visually centers with letter spacing */
+}
+
+.monogram-tag {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #8da9c4;
+  font-weight: 600;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.6;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.profile-caption {
+  width: 100%;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-caption-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.caption-icon {
+  color: var(--color-teal);
+}
+
+.profile-caption-name {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.profile-caption-sub {
+  font-size: var(--text-xs);
+  color: var(--color-charcoal-muted);
+  margin-top: 2px;
+}

@@ -1,0 +1,134 @@
+import React, { useState, useEffect } from "react";
+import { Mail, Menu, X, ArrowUpRight } from "lucide-react";
+import { GithubIcon } from "./GithubIcon";
+import { profileData } from "../data/profile";
+import "./Navbar.css";
+
+export const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const closeMenu = () => setIsOpen(false);
+
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Research", href: "#research" },
+    { label: "Publications", href: "#publications" },
+    { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""}`}>
+      <div className="container header-container">
+        {/* Brand */}
+        <a href="#main-content" className="header-brand" aria-label="Ekra Islam Ohi Home">
+          <span className="brand-name">{profileData.name}</span>
+          <span className="brand-tag">Academic & Research Portfolio</span>
+        </a>
+
+        {/* Desktop Navigation */}
+        <nav className="desktop-nav" aria-label="Main Navigation">
+          <ul className="nav-list">
+            {navLinks.map((link) => (
+              <li key={link.href} className="nav-item">
+                <a href={link.href} className="nav-link">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Quick Actions (Desktop) */}
+        <div className="header-actions">
+          <a
+            href={profileData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-icon-link"
+            aria-label="GitHub Profile"
+            title="GitHub Profile"
+          >
+            <GithubIcon size={18} aria-hidden="true" />
+            <span className="action-text">GitHub</span>
+            <ArrowUpRight size={13} className="external-arrow" aria-hidden="true" />
+          </a>
+          <a
+            href={`mailto:${profileData.email}`}
+            className="action-icon-link action-icon-link--primary"
+            aria-label="Send Email to Ekra Islam Ohi"
+            title="Send Email"
+          >
+            <Mail size={16} aria-hidden="true" />
+            <span className="action-text">Email</span>
+          </a>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            type="button"
+            className="mobile-toggle"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Drawer */}
+      <div
+        id="mobile-navigation"
+        className={`mobile-drawer ${isOpen ? "mobile-drawer--open" : ""}`}
+        aria-hidden={!isOpen}
+      >
+        <div className="container mobile-drawer-inner">
+          <nav aria-label="Mobile Navigation">
+            <ul className="mobile-nav-list">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="mobile-nav-link" onClick={closeMenu}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="mobile-drawer-footer">
+            <a
+              href={profileData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary mobile-footer-btn"
+              onClick={closeMenu}
+            >
+              <GithubIcon size={16} aria-hidden="true" />
+              <span>GitHub Profile</span>
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+            <a
+              href={`mailto:${profileData.email}`}
+              className="btn btn-primary mobile-footer-btn"
+              onClick={closeMenu}
+            >
+              <Mail size={16} aria-hidden="true" />
+              <span>{profileData.email}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};

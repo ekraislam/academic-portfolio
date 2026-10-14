@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Hero Section Styles
+   ========================================================================== */
+
+.hero-section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-cream);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  align-items: start;
+  gap: var(--space-12);
+}
+
+.hero-content {
+  max-width: var(--content-max-width);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-teal);
+  margin-bottom: var(--space-3);
+}
+
+.eyebrow-icon {
+  color: var(--color-teal);
+}
+
+.hero-name {
+  margin-bottom: var(--space-2);
+  color: var(--color-navy);
+}
+
+.hero-affiliation {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-charcoal-muted);
+  margin-bottom: var(--space-5);
+  line-height: var(--leading-snug);
+}
+
+.hero-directions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.hero-intro {
+  font-size: var(--text-md);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-relaxed);
+}
+
+.hero-interests {
+  margin-bottom: var(--space-8);
+  padding: var(--space-4);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.interests-label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero-aside {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero-aside {
+    order: -1;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,58 @@
+import React from "react";
+import { ArrowUp, Mail, ShieldCheck } from "lucide-react";
+import { GithubIcon } from "./GithubIcon";
+import { profileData } from "../data/profile";
+import "./Footer.css";
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+export const Footer: React.FC = () => {
+
+  return (
+    <footer className="site-footer" role="contentinfo">
+      <div className="container footer-container">
+        {/* Top Tier */}
+        <div className="footer-top">
+          <div className="footer-identity">
+            <span className="footer-name">{profileData.name}</span>
+            <span className="footer-affiliation">{profileData.affiliation}</span>
+            <div className="footer-integrity-badge">
+              <ShieldCheck size={14} className="integrity-icon" aria-hidden="true" />
+              <span>Project descriptions are based on available repository documentation.</span>
+            </div>
+          </div>
+
+          <div className="footer-links-group">
+            <a
+              href={profileData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              <GithubIcon size={15} aria-hidden="true" />
+              <span>GitHub</span>
+            </a>
+            <a href={`mailto:${profileData.email}`} className="footer-link">
+              <Mail size={15} aria-hidden="true" />
+              <span>Email</span>
+            </a>
+            <a href="#main-content" className="footer-link footer-top-btn">
+              <ArrowUp size={15} aria-hidden="true" />
+              <span>Back to Top</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Tier */}
+        <div className="footer-bottom">
+          <p className="footer-copyright">
+            &copy; {CURRENT_YEAR} {profileData.name}. All rights reserved. Designed for academic and research presentation.
+          </p>
+          <p className="footer-meta">
+            Semantic HTML5 • Accessible High-Contrast Palette • Static Content
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
