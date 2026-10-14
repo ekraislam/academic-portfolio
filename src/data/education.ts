@@ -14,7 +14,7 @@ export const educationData: EducationItem[] = [
     degree: "Bachelor of Science",
     field: "Computer Science and Engineering",
     institution: "Green University of Bangladesh",
-    period: "2022 – 2026 (Expected)",
+    period: "2023 - 2027 (Expected)",
     status: "Undergraduate Degree Candidate",
     location: "Dhaka, Bangladesh",
     description:

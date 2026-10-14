@@ -19,7 +19,7 @@ export const About: React.FC = () => {
           {/* Main Narrative Column */}
           <div className="about-text-column">
             <p className="about-paragraph">
-              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2026). My coursework combines core algorithmic foundations (including Data Structures, Operating Systems, and Machine Learning) with extensive hands-on software development across Python, TypeScript, and C++.
+              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2027). My coursework combines core algorithmic foundations (including Data Structures, Operating Systems, and Machine Learning) with extensive hands-on software development across Python, TypeScript, and C++.
             </p>
             <p className="about-paragraph">
               My research interests lie at the intersection of Empirical Machine Learning Reliability and Applied Systems. In computer vision, I have investigated deep transfer learning paired with generative patch augmentation (DCGAN) and explainable activation mapping (Grad-CAM) for plant disease diagnosis, which is currently submitted for conference evaluation. In NLP, I focus on evidence-aware stance detection and citation verification under context-isolation protocols to mitigate hallucinations in scientific synthesis.
