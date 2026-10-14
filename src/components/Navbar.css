@@ -231,7 +231,7 @@
   }
 
   .action-icon-link {
-    padding: 0.48rem;
+    padding: 0.45rem;
   }
 
   .external-arrow {
@@ -247,17 +247,52 @@
   }
 }
 
-/* Mobile Screen Tuning (< 540px) */
-@media (max-width: 540px) {
+/* Tablet & Mobile Tuning (< 768px): Clean, perfectly spaced header */
+@media (max-width: 768px) {
+  .header-container {
+    height: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
   .brand-tag {
-    display: none;
+    display: none !important;
+  }
+
+  .action-icon-link--social {
+    display: none !important;
   }
 
   .header-actions {
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 
   .action-icon-link {
-    padding: 0.4rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .mobile-toggle {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+}
+
+/* Small Phone Screen Tuning (< 400px) */
+@media (max-width: 400px) {
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .action-icon-link {
+    padding: 0.35rem 0.5rem;
   }
 }

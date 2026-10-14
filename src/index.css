@@ -89,6 +89,7 @@ html {
   scroll-padding-top: 5.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -98,6 +99,7 @@ body {
   color: var(--color-charcoal);
   background-color: var(--color-cream);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================

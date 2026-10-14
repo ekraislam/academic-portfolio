@@ -70,7 +70,7 @@ export const Navbar: React.FC = () => {
             href={profileData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="action-icon-link"
+            className="action-icon-link action-icon-link--social"
             aria-label="GitHub Profile"
             title="GitHub Profile"
           >
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
             href={profileData.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="action-icon-link"
+            className="action-icon-link action-icon-link--social"
             aria-label="LinkedIn Profile"
             title="LinkedIn Profile"
           >
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
           </a>
           <a
             href={`mailto:${profileData.email}`}
-            className="action-icon-link action-icon-link--primary"
+            className="action-icon-link action-icon-link--primary action-icon-link--social"
             aria-label="Send Email to Ekra Islam Ohi"
             title="Send Email"
           >
