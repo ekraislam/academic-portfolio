@@ -17,7 +17,8 @@
   padding: var(--space-7) var(--space-8);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: var(--space-4);
   box-shadow: 0 1px 4px rgba(20, 43, 69, 0.03);
   transition: border-color var(--transition-fast);
 }
@@ -27,7 +28,7 @@
 }
 
 .about-card-header {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 
 .about-eyebrow {
@@ -52,7 +53,10 @@
   color: var(--color-charcoal);
   line-height: 1.76;
   margin: 0;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .about-paragraph strong {
@@ -114,6 +118,10 @@
   color: var(--color-charcoal-muted);
   line-height: 1.6;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Responsive */

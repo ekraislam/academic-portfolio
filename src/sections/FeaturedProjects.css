@@ -277,6 +277,10 @@
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-4);
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .project-card-note {
@@ -287,6 +291,10 @@
   border-radius: var(--radius-xs);
   margin-bottom: var(--space-4);
   border-left: 2px solid var(--color-teal);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .note-label {

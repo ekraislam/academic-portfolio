@@ -152,6 +152,10 @@
   color: var(--color-charcoal);
   line-height: 1.7;
   margin-bottom: var(--space-4);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .pub-footer {

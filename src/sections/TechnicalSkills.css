@@ -70,6 +70,10 @@
   font-size: var(--text-sm);
   color: var(--color-charcoal-muted);
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .skill-tags-list {

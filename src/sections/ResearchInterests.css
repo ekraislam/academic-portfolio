@@ -44,6 +44,10 @@
   line-height: var(--leading-relaxed);
   margin-bottom: var(--space-5);
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .research-card-topics {

@@ -102,6 +102,13 @@ body {
   overflow-x: clip;
 }
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 .app-root {
   min-height: 100vh;
   padding-top: 4.5rem;
@@ -241,6 +248,10 @@ a:hover {
   font-size: var(--text-lg);
   color: var(--color-charcoal-muted);
   line-height: var(--leading-normal);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* ==========================================================================

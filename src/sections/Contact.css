@@ -125,6 +125,10 @@
   color: var(--color-charcoal);
   line-height: var(--leading-normal);
   margin-bottom: var(--space-3);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .aside-list {
@@ -140,6 +144,8 @@
   font-size: var(--text-sm);
   color: var(--color-charcoal-muted);
   line-height: var(--leading-normal);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .aside-disclaimer {
@@ -150,6 +156,10 @@
   border-radius: var(--radius-xs);
   border: 1px dashed var(--color-border-secondary);
   line-height: var(--leading-normal);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 @media (max-width: 860px) {
