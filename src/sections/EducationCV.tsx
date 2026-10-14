@@ -95,7 +95,7 @@ export const EducationCV: React.FC = () => {
               )}
 
               <a
-                href={`mailto:${profileData.email}?subject=Academic%20Dossier%20Inquiry%20%E2%80%94%20Ekra%20Islam%20Ohi`}
+                href={`mailto:${profileData.email}?subject=Academic%20Dossier%20Inquiry:%20Ekra%20Islam%20Ohi`}
                 className="btn btn-secondary cv-action-btn"
               >
                 <Mail size={16} aria-hidden="true" />

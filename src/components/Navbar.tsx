@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Mail, Menu, X, ArrowUpRight, FileDown } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
+import { LinkedinIcon } from "./LinkedinIcon";
 import { profileData } from "../data/profile";
 import "./Navbar.css";
 
@@ -78,6 +79,18 @@ export const Navbar: React.FC = () => {
             <ArrowUpRight size={13} className="external-arrow" aria-hidden="true" />
           </a>
           <a
+            href={profileData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-icon-link"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
+          >
+            <LinkedinIcon size={16} aria-hidden="true" />
+            <span className="action-text">LinkedIn</span>
+            <ArrowUpRight size={13} className="external-arrow" aria-hidden="true" />
+          </a>
+          <a
             href={`mailto:${profileData.email}`}
             className="action-icon-link action-icon-link--primary"
             aria-label="Send Email to Ekra Islam Ohi"
@@ -140,6 +153,17 @@ export const Navbar: React.FC = () => {
             >
               <GithubIcon size={16} aria-hidden="true" />
               <span>GitHub Profile</span>
+              <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+            <a
+              href={profileData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary mobile-footer-btn"
+              onClick={closeMenu}
+            >
+              <LinkedinIcon size={16} aria-hidden="true" />
+              <span>LinkedIn Profile</span>
               <ArrowUpRight size={14} aria-hidden="true" />
             </a>
             <a

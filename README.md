@@ -1,4 +1,4 @@
-# Ekra Islam Ohi — Academic & Research Portfolio
+# Ekra Islam Ohi | Academic & Research Portfolio
 
 A personal academic and research portfolio website for **Ekra Islam Ohi**, an undergraduate student in Computer Science and Engineering at **Green University of Bangladesh**.
 

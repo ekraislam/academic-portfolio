@@ -103,7 +103,7 @@ export const PublicationsPreview: React.FC = () => {
             </p>
           </div>
           <a
-            href={`mailto:${profileData.email}?subject=Research%20Manuscript%20Inquiry%20%E2%80%94%20Ekra%20Islam%20Ohi`}
+            href={`mailto:${profileData.email}?subject=Research%20Manuscript%20Inquiry:%20Ekra%20Islam%20Ohi`}
             className="btn btn-secondary inquiry-btn"
           >
             <Mail size={15} aria-hidden="true" />

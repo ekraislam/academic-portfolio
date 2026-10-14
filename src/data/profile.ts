@@ -5,6 +5,7 @@ export interface ProfileData {
   institution: string;
   email: string;
   github: string;
+  linkedin: string;
   monogram: string;
   photoUrl?: string;
   cvUrl?: string;
@@ -20,6 +21,7 @@ export const profileData: ProfileData = {
   institution: "Green University of Bangladesh",
   email: "ekraislamohi.academic@gmail.com",
   github: "https://github.com/ekraislam",
+  linkedin: "https://www.linkedin.com/in/ekra-islam-ohi",
   monogram: "EIO",
   photoUrl: "/assets/ekra-islam-ohi.jpg",
   cvUrl: "/assets/Ekra_Islam_Ohi_Academic_CV.pdf",

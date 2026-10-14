@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUp, Mail, ShieldCheck } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
+import { LinkedinIcon } from "./LinkedinIcon";
 import { profileData } from "../data/profile";
 import "./Footer.css";
 
@@ -42,6 +43,17 @@ export const Footer: React.FC = () => {
               <GithubIcon size={15} aria-hidden="true" />
               <span>GitHub</span>
             </a>
+            {profileData.linkedin && (
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
+                <LinkedinIcon size={15} aria-hidden="true" />
+                <span>LinkedIn</span>
+              </a>
+            )}
             <a href={`mailto:${profileData.email}`} className="footer-link">
               <Mail size={15} aria-hidden="true" />
               <span>Email</span>

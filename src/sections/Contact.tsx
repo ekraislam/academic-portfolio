@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Copy, Check, ArrowUpRight, MessageSquareCode } from "lucide-react";
 import { GithubIcon } from "../components/GithubIcon";
+import { LinkedinIcon } from "../components/LinkedinIcon";
 import { SectionHeading } from "../components/SectionHeading";
 import { profileData } from "../data/profile";
 import "./Contact.css";
@@ -110,6 +111,38 @@ export const Contact: React.FC = () => {
                 </a>
               </div>
             </div>
+
+            {/* LinkedIn Card */}
+            {profileData.linkedin && (
+              <div className="contact-method-card">
+                <div className="contact-icon-box">
+                  <LinkedinIcon size={22} aria-hidden="true" />
+                </div>
+                <div className="contact-method-info">
+                  <span className="contact-method-label">LinkedIn Professional Network</span>
+                  <a
+                    href={profileData.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-method-value"
+                  >
+                    linkedin.com/in/ekra-islam-ohi
+                  </a>
+                </div>
+                <div className="contact-method-actions">
+                  <a
+                    href={profileData.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary contact-action-btn"
+                  >
+                    <LinkedinIcon size={15} aria-hidden="true" />
+                    <span>Connect</span>
+                    <ArrowUpRight size={13} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Academic Inquiries Note */}

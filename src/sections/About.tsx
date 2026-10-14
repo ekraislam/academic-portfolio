@@ -19,10 +19,10 @@ export const About: React.FC = () => {
           {/* Main Narrative Column */}
           <div className="about-text-column">
             <p className="about-paragraph">
-              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2026). My coursework combines core algorithmic foundations—including Data Structures, Operating Systems, and Machine Learning—with extensive hands-on software development across Python, TypeScript, and C++.
+              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2026). My coursework combines core algorithmic foundations (including Data Structures, Operating Systems, and Machine Learning) with extensive hands-on software development across Python, TypeScript, and C++.
             </p>
             <p className="about-paragraph">
-              My research interests lie at the intersection of Empirical Machine Learning Reliability and Applied Systems. In computer vision, I have investigated deep transfer learning paired with generative patch augmentation (DCGAN) and explainable activation mapping (Grad-CAM) for plant disease diagnosis—work currently submitted for conference evaluation. In NLP, I focus on evidence-aware stance detection and citation verification under context-isolation protocols to mitigate hallucinations in scientific synthesis.
+              My research interests lie at the intersection of Empirical Machine Learning Reliability and Applied Systems. In computer vision, I have investigated deep transfer learning paired with generative patch augmentation (DCGAN) and explainable activation mapping (Grad-CAM) for plant disease diagnosis, which is currently submitted for conference evaluation. In NLP, I focus on evidence-aware stance detection and citation verification under context-isolation protocols to mitigate hallucinations in scientific synthesis.
             </p>
             <p className="about-paragraph">
               Looking toward the future, I am actively preparing for international graduate studies (M.S./Ph.D.) and research-driven software engineering roles. My goal is to contribute to robust, interpretable intelligent systems that provide transparent, empirically grounded solutions to complex domain challenges.
