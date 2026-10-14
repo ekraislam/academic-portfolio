@@ -45,9 +45,16 @@
     font-size: 8.5pt;
     color: #4a515a;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  .contact-row {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 8px;
   }
   
   .contact-bar a {
@@ -57,7 +64,8 @@
   }
   
   .sep {
-    color: #a0a6b1;
+    color: #8da9c4;
+    font-size: 8pt;
   }
   
   /* Section Layout */
@@ -196,13 +204,16 @@
   <header class="header">
     <h1 class="name">Ekra Islam Ohi</h1>
     <div class="contact-bar">
-      <span>Dhaka, Bangladesh</span>
-      <span class="sep">|</span>
-      <span>Email: <a href="mailto:ekraislamohi.academic@gmail.com">ekraislamohi.academic@gmail.com</a></span>
-      <span class="sep">|</span>
-      <span>LinkedIn: <a href="https://www.linkedin.com/in/ekra-islam-ohi">linkedin.com/in/ekra-islam-ohi</a></span>
-      <span class="sep">|</span>
-      <span>GitHub: <a href="https://github.com/ekraislam">github.com/ekraislam</a></span>
+      <div class="contact-row">
+        <span>Dhaka, Bangladesh</span>
+        <span class="sep">•</span>
+        <span>Email: <a href="mailto:ekraislamohi.academic@gmail.com">ekraislamohi.academic@gmail.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span>GitHub: <a href="https://github.com/ekraislam">github.com/ekraislam</a></span>
+        <span class="sep">•</span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/ekra-islam-ohi">linkedin.com/in/ekra-islam-ohi</a></span>
+      </div>
     </div>
   </header>
 
