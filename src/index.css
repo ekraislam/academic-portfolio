@@ -89,7 +89,7 @@ html {
   scroll-padding-top: 5.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -99,7 +99,18 @@ body {
   color: var(--color-charcoal);
   background-color: var(--color-cream);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.app-root {
+  min-height: 100vh;
+  padding-top: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  .app-root {
+    padding-top: 4rem;
+  }
 }
 
 /* ==========================================================================
