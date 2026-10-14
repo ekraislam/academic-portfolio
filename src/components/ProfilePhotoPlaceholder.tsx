@@ -11,7 +11,9 @@ export const ProfilePhotoPlaceholder: React.FC<ProfilePhotoProps> = ({
   photoUrl = null,
   name = "Ekra Islam Ohi",
 }) => {
-  if (photoUrl) {
+  const [hasError, setHasError] = React.useState(false);
+
+  if (photoUrl && !hasError) {
     return (
       <div className="profile-frame" aria-label={`Academic portrait of ${name}`}>
         <div className="profile-image-container">
@@ -22,6 +24,7 @@ export const ProfilePhotoPlaceholder: React.FC<ProfilePhotoProps> = ({
             loading="eager"
             width="270"
             height="270"
+            onError={() => setHasError(true)}
           />
         </div>
         <div className="profile-caption">

@@ -1,3 +1,6 @@
+import photoUrl from "../assets/ekra-islam-ohi.jpg";
+import cvUrl from "../assets/Ekra_Islam_Ohi_Academic_CV.pdf";
+
 export interface ProfileData {
   name: string;
   affiliation: string;
@@ -23,8 +26,8 @@ export const profileData: ProfileData = {
   github: "https://github.com/ekraislam",
   linkedin: "https://www.linkedin.com/in/ekra-islam-ohi",
   monogram: "EIO",
-  photoUrl: "./assets/ekra-islam-ohi.jpg",
-  cvUrl: "./assets/Ekra_Islam_Ohi_Academic_CV.pdf",
+  photoUrl: photoUrl,
+  cvUrl: cvUrl,
   directions: [
     "AI/ML & Systems Engineering",
     "Evidence Grounding & NLP Reliability",
