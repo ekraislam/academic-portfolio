@@ -16,61 +16,68 @@ export const About: React.FC = () => {
         />
 
         <div className="about-grid">
-          {/* Main Narrative & Fast Facts Column */}
-          <div className="about-text-column">
-            <div className="about-narrative-card">
+          {/* Left Column: Unified Academic Dossier Card */}
+          <div className="about-dossier-card">
+            <div className="dossier-narrative">
+              <div className="dossier-eyebrow">
+                <GraduationCap size={15} aria-hidden="true" />
+                <span>Researcher Profile &amp; Direction</span>
+              </div>
               <p className="about-lead-paragraph">
                 I am an undergraduate researcher and Computer Science &amp; Engineering student at{" "}
                 <strong>{profileData.institution}</strong> (graduating 2027), working at the intersection of{" "}
-                <strong>Empirical Machine Learning Reliability</strong> and <strong>Applied Systems</strong>. My research explores explainable computer vision (Grad-CAM with generative patch augmentation) and evidence-grounded citation verification in NLP to mitigate hallucinations in scientific synthesis. Looking ahead, I am actively preparing for international graduate studies (<strong>M.S./Ph.D.</strong>) and research-driven software engineering roles dedicated to building robust, interpretable intelligent systems.
+                <strong>Empirical Machine Learning Reliability</strong> and <strong>Applied Systems</strong>. My research investigates explainable computer vision (Grad-CAM with generative patch augmentation) and evidence-grounded citation verification in NLP to mitigate hallucinations in scientific synthesis. Looking ahead, I am actively preparing for international graduate studies (<strong>M.S./Ph.D.</strong>) and research-driven software engineering roles dedicated to building robust, interpretable intelligent systems.
               </p>
             </div>
 
-            {/* Fast-Facts Highlights Grid */}
-            <div className="about-highlights-grid">
-              <div className="about-highlight-card">
-                <div className="highlight-icon-box">
-                  <GraduationCap size={18} aria-hidden="true" />
+            {/* Integrated Parameters Bar (Seamlessly inside the same dossier card) */}
+            <div className="dossier-meta-section">
+              <span className="dossier-meta-heading">Core Academic Parameters</span>
+              <div className="dossier-meta-grid">
+                <div className="dossier-meta-item">
+                  <div className="meta-icon-pill">
+                    <GraduationCap size={15} aria-hidden="true" />
+                  </div>
+                  <div className="meta-text-block">
+                    <span className="meta-label">Program &amp; Institution</span>
+                    <span className="meta-value">B.Sc. in CSE • Green University (2027)</span>
+                  </div>
                 </div>
-                <div className="highlight-info">
-                  <span className="highlight-label">Degree &amp; Year</span>
-                  <span className="highlight-value">B.Sc. in CSE (2023–2027)</span>
-                </div>
-              </div>
 
-              <div className="about-highlight-card">
-                <div className="highlight-icon-box">
-                  <Sparkles size={18} aria-hidden="true" />
+                <div className="dossier-meta-item">
+                  <div className="meta-icon-pill">
+                    <Sparkles size={15} aria-hidden="true" />
+                  </div>
+                  <div className="meta-text-block">
+                    <span className="meta-label">Primary Research</span>
+                    <span className="meta-value">ML Reliability &amp; Explainable AI</span>
+                  </div>
                 </div>
-                <div className="highlight-info">
-                  <span className="highlight-label">Research Focus</span>
-                  <span className="highlight-value">ML Reliability &amp; XAI</span>
-                </div>
-              </div>
 
-              <div className="about-highlight-card">
-                <div className="highlight-icon-box">
-                  <Cpu size={18} aria-hidden="true" />
+                <div className="dossier-meta-item">
+                  <div className="meta-icon-pill">
+                    <Cpu size={15} aria-hidden="true" />
+                  </div>
+                  <div className="meta-text-block">
+                    <span className="meta-label">Technical Tooling</span>
+                    <span className="meta-value">Python (PyTorch) • TypeScript • C++</span>
+                  </div>
                 </div>
-                <div className="highlight-info">
-                  <span className="highlight-label">Core Technical Stack</span>
-                  <span className="highlight-value">Python (PyTorch) • TS • C++</span>
-                </div>
-              </div>
 
-              <div className="about-highlight-card">
-                <div className="highlight-icon-box">
-                  <Target size={18} aria-hidden="true" />
-                </div>
-                <div className="highlight-info">
-                  <span className="highlight-label">Academic Path</span>
-                  <span className="highlight-value">International M.S./Ph.D.</span>
+                <div className="dossier-meta-item">
+                  <div className="meta-icon-pill">
+                    <Target size={15} aria-hidden="true" />
+                  </div>
+                  <div className="meta-text-block">
+                    <span className="meta-label">Academic Objective</span>
+                    <span className="meta-value">International M.S. / Ph.D. Trajectory</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Pillars Card Column */}
+          {/* Right Column: 3 Balanced Pillars */}
           <div className="about-pillars-column">
             <div className="pillar-card">
               <div className="pillar-icon-box">
