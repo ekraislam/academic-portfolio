@@ -279,8 +279,9 @@
   flex-grow: 1;
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 .project-card-note {
@@ -293,8 +294,9 @@
   border-left: 2px solid var(--color-teal);
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 .note-label {

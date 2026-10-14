@@ -89,8 +89,9 @@
   margin-bottom: var(--space-4);
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 /* Coursework */
@@ -176,8 +177,9 @@
   margin-bottom: var(--space-5);
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 .cv-actions-group {

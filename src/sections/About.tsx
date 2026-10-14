@@ -16,17 +16,15 @@ export const About: React.FC = () => {
         />
 
         <div className="about-grid">
-          {/* Left Column: Complete Scholarly Narrative Card */}
-          <div className="about-narrative-card">
-            <div className="about-card-header">
-              <div className="about-eyebrow">
-                <GraduationCap size={16} aria-hidden="true" />
-                <span>Academic Foundations &amp; Research Trajectory</span>
-              </div>
+          {/* Left Column: Open Scholarly Narrative (NO white box) */}
+          <div className="about-narrative-column">
+            <div className="about-statement-badge">
+              <GraduationCap size={15} aria-hidden="true" />
+              <span>Academic &amp; Research Statement</span>
             </div>
 
-            <div className="about-narrative-content">
-              <p className="about-paragraph">
+            <div className="about-narrative-body">
+              <p className="about-paragraph about-lead">
                 I am an undergraduate researcher and Computer Science and Engineering student at{" "}
                 <strong>{profileData.institution}</strong> (expected graduation 2027). My coursework combines rigorous algorithmic foundations—including Data Structures, Algorithms, Operating Systems, and Machine Learning theory—with extensive hands-on software development across Python, TypeScript, and C++.
               </p>
@@ -38,6 +36,15 @@ export const About: React.FC = () => {
               <p className="about-paragraph">
                 Looking toward the future, I am actively preparing for international graduate studies (<strong>M.S./Ph.D.</strong>) and research-driven software engineering roles. My overarching aspiration is to engineer robust, interpretable intelligent systems that provide transparent, mathematically sound, and empirically grounded solutions to complex domain challenges.
               </p>
+            </div>
+
+            {/* Core Research Focus Pills */}
+            <div className="about-focus-tags" aria-label="Core Academic Focus Areas">
+              <span className="about-tag">Empirical ML Reliability</span>
+              <span className="about-tag">Explainable Vision (Grad-CAM)</span>
+              <span className="about-tag">DCGAN Augmentation</span>
+              <span className="about-tag">NLP Citation Verification</span>
+              <span className="about-tag">M.S. / Ph.D. Bound</span>
             </div>
           </div>
 

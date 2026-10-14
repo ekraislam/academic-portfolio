@@ -105,8 +105,9 @@ body {
 p {
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 .app-root {
@@ -248,10 +249,10 @@ a:hover {
   font-size: var(--text-lg);
   color: var(--color-charcoal-muted);
   line-height: var(--leading-normal);
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-wrap: pretty;
 }
 
 /* ==========================================================================
