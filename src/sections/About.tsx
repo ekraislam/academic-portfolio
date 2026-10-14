@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Compass, Target } from "lucide-react";
+import { BookOpen, Compass, Target, GraduationCap, Cpu, Sparkles } from "lucide-react";
 import { SectionHeading } from "../components/SectionHeading";
 import { profileData } from "../data/profile";
 import "./About.css";
@@ -16,17 +16,58 @@ export const About: React.FC = () => {
         />
 
         <div className="about-grid">
-          {/* Main Narrative Column */}
+          {/* Main Narrative & Fast Facts Column */}
           <div className="about-text-column">
-            <p className="about-paragraph">
-              I am an undergraduate researcher and Computer Science and Engineering student at {profileData.institution} (expected graduation 2027). My coursework combines core algorithmic foundations (including Data Structures, Operating Systems, and Machine Learning) with extensive hands-on software development across Python, TypeScript, and C++.
-            </p>
-            <p className="about-paragraph">
-              My research interests lie at the intersection of Empirical Machine Learning Reliability and Applied Systems. In computer vision, I have investigated deep transfer learning paired with generative patch augmentation (DCGAN) and explainable activation mapping (Grad-CAM) for plant disease diagnosis, which is currently submitted for conference evaluation. In NLP, I focus on evidence-aware stance detection and citation verification under context-isolation protocols to mitigate hallucinations in scientific synthesis.
-            </p>
-            <p className="about-paragraph">
-              Looking toward the future, I am actively preparing for international graduate studies (M.S./Ph.D.) and research-driven software engineering roles. My goal is to contribute to robust, interpretable intelligent systems that provide transparent, empirically grounded solutions to complex domain challenges.
-            </p>
+            <div className="about-narrative-card">
+              <p className="about-lead-paragraph">
+                I am an undergraduate researcher and Computer Science &amp; Engineering student at{" "}
+                <strong>{profileData.institution}</strong> (graduating 2027), working at the intersection of{" "}
+                <strong>Empirical Machine Learning Reliability</strong> and <strong>Applied Systems</strong>. My research explores explainable computer vision (Grad-CAM with generative patch augmentation) and evidence-grounded citation verification in NLP to mitigate hallucinations in scientific synthesis. Looking ahead, I am actively preparing for international graduate studies (<strong>M.S./Ph.D.</strong>) and research-driven software engineering roles dedicated to building robust, interpretable intelligent systems.
+              </p>
+            </div>
+
+            {/* Fast-Facts Highlights Grid */}
+            <div className="about-highlights-grid">
+              <div className="about-highlight-card">
+                <div className="highlight-icon-box">
+                  <GraduationCap size={18} aria-hidden="true" />
+                </div>
+                <div className="highlight-info">
+                  <span className="highlight-label">Degree &amp; Year</span>
+                  <span className="highlight-value">B.Sc. in CSE (2023–2027)</span>
+                </div>
+              </div>
+
+              <div className="about-highlight-card">
+                <div className="highlight-icon-box">
+                  <Sparkles size={18} aria-hidden="true" />
+                </div>
+                <div className="highlight-info">
+                  <span className="highlight-label">Research Focus</span>
+                  <span className="highlight-value">ML Reliability &amp; XAI</span>
+                </div>
+              </div>
+
+              <div className="about-highlight-card">
+                <div className="highlight-icon-box">
+                  <Cpu size={18} aria-hidden="true" />
+                </div>
+                <div className="highlight-info">
+                  <span className="highlight-label">Core Technical Stack</span>
+                  <span className="highlight-value">Python (PyTorch) • TS • C++</span>
+                </div>
+              </div>
+
+              <div className="about-highlight-card">
+                <div className="highlight-icon-box">
+                  <Target size={18} aria-hidden="true" />
+                </div>
+                <div className="highlight-info">
+                  <span className="highlight-label">Academic Path</span>
+                  <span className="highlight-value">International M.S./Ph.D.</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Pillars Card Column */}
@@ -35,10 +76,10 @@ export const About: React.FC = () => {
               <div className="pillar-icon-box">
                 <BookOpen size={20} aria-hidden="true" />
               </div>
-              <div>
+              <div className="pillar-content">
                 <h3 className="pillar-title">Academic Foundations</h3>
                 <p className="pillar-desc">
-                  Rigorous CSE undergraduate curriculum at {profileData.institution}, balancing theoretical algorithms with systems engineering and reproducible experimentation.
+                  Rigorous CSE curriculum at {profileData.institution}, balancing core theoretical algorithms, operating systems, and discrete mathematics with reproducible experimentation.
                 </p>
               </div>
             </div>
@@ -47,10 +88,10 @@ export const About: React.FC = () => {
               <div className="pillar-icon-box">
                 <Compass size={20} aria-hidden="true" />
               </div>
-              <div>
+              <div className="pillar-content">
                 <h3 className="pillar-title">Empirical Research</h3>
                 <p className="pillar-desc">
-                  Active inquiries across explainable computer vision (Grad-CAM), class-imbalance generative modeling, and evidence-grounded citation stance classification.
+                  Active inquiries across explainable computer vision (Grad-CAM), generative patch augmentation (DCGAN), and citation stance verification.
                 </p>
               </div>
             </div>
@@ -59,10 +100,10 @@ export const About: React.FC = () => {
               <div className="pillar-icon-box">
                 <Target size={20} aria-hidden="true" />
               </div>
-              <div>
+              <div className="pillar-content">
                 <h3 className="pillar-title">Graduate Trajectory</h3>
                 <p className="pillar-desc">
-                  Focused on pursuing international graduate research programs dedicated to dependable artificial intelligence, natural language reliability, and applied computing.
+                  Dedicated to joining international graduate laboratories focused on trustworthy artificial intelligence, NLP robustness, and computational rigor.
                 </p>
               </div>
             </div>
