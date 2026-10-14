@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Mail, Menu, X, ArrowUpRight, FileDown } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedinIcon } from "./LinkedinIcon";
+import { WhatsappIcon } from "./WhatsappIcon";
 import { profileData } from "../data/profile";
 import "./Navbar.css";
 
@@ -52,53 +53,20 @@ export const Navbar: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Quick Actions (Desktop) */}
+        {/* Header Action: Primary Academic CTA */}
         <div className="header-actions">
           {profileData.cvUrl && (
             <a
               href={profileData.cvUrl}
               download="Ekra_Islam_Ohi_Academic_CV.pdf"
-              className="action-icon-link"
+              className="action-icon-link action-icon-link--cv"
               aria-label="Download Academic CV (PDF)"
               title="Download Academic CV"
             >
-              <FileDown size={16} aria-hidden="true" />
+              <FileDown size={15} aria-hidden="true" />
               <span className="action-text">CV (PDF)</span>
             </a>
           )}
-          <a
-            href={profileData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="action-icon-link action-icon-link--social"
-            aria-label="GitHub Profile"
-            title="GitHub Profile"
-          >
-            <GithubIcon size={18} aria-hidden="true" />
-            <span className="action-text">GitHub</span>
-            <ArrowUpRight size={13} className="external-arrow" aria-hidden="true" />
-          </a>
-          <a
-            href={profileData.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="action-icon-link action-icon-link--social"
-            aria-label="LinkedIn Profile"
-            title="LinkedIn Profile"
-          >
-            <LinkedinIcon size={16} aria-hidden="true" />
-            <span className="action-text">LinkedIn</span>
-            <ArrowUpRight size={13} className="external-arrow" aria-hidden="true" />
-          </a>
-          <a
-            href={`mailto:${profileData.email}`}
-            className="action-icon-link action-icon-link--primary action-icon-link--social"
-            aria-label="Send Email to Ekra Islam Ohi"
-            title="Send Email"
-          >
-            <Mail size={16} aria-hidden="true" />
-            <span className="action-text">Email</span>
-          </a>
 
           {/* Mobile Menu Toggle Button */}
           <button
@@ -137,43 +105,58 @@ export const Navbar: React.FC = () => {
               <a
                 href={profileData.cvUrl}
                 download="Ekra_Islam_Ohi_Academic_CV.pdf"
-                className="btn btn-secondary mobile-footer-btn"
+                className="btn btn-primary mobile-footer-btn"
                 onClick={closeMenu}
               >
                 <FileDown size={16} aria-hidden="true" />
                 <span>Download Academic CV (PDF)</span>
               </a>
             )}
-            <a
-              href={profileData.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary mobile-footer-btn"
-              onClick={closeMenu}
-            >
-              <GithubIcon size={16} aria-hidden="true" />
-              <span>GitHub Profile</span>
-              <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
-            <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary mobile-footer-btn"
-              onClick={closeMenu}
-            >
-              <LinkedinIcon size={16} aria-hidden="true" />
-              <span>LinkedIn Profile</span>
-              <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
+            {profileData.whatsappUrl && (
+              <a
+                href={profileData.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary mobile-footer-btn mobile-footer-btn--whatsapp"
+                onClick={closeMenu}
+              >
+                <WhatsappIcon size={16} aria-hidden="true" />
+                <span>WhatsApp ({profileData.whatsapp})</span>
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            )}
             <a
               href={`mailto:${profileData.email}`}
-              className="btn btn-primary mobile-footer-btn"
+              className="btn btn-secondary mobile-footer-btn"
               onClick={closeMenu}
             >
               <Mail size={16} aria-hidden="true" />
               <span>{profileData.email}</span>
             </a>
+            <div className="mobile-social-row">
+              <a
+                href={profileData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary mobile-social-half"
+                onClick={closeMenu}
+              >
+                <GithubIcon size={16} aria-hidden="true" />
+                <span>GitHub</span>
+              </a>
+              {profileData.linkedin && (
+                <a
+                  href={profileData.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary mobile-social-half"
+                  onClick={closeMenu}
+                >
+                  <LinkedinIcon size={16} aria-hidden="true" />
+                  <span>LinkedIn</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

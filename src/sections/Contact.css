@@ -76,8 +76,21 @@
   padding: 0.4rem 0.8rem;
 }
 
-.copied-icon {
-  color: var(--color-teal);
+.contact-icon-box--whatsapp {
+  background-color: rgba(37, 211, 102, 0.12);
+  color: #128C7E;
+}
+
+.contact-action-btn--whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.contact-action-btn--whatsapp:hover {
+  background-color: #1EBE5D;
+  border-color: #1EBE5D;
+  color: #FFFFFF;
 }
 
 /* Aside Card */

@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowUp, Mail, ShieldCheck } from "lucide-react";
 import { GithubIcon } from "./GithubIcon";
 import { LinkedinIcon } from "./LinkedinIcon";
+import { WhatsappIcon } from "./WhatsappIcon";
 import { profileData } from "../data/profile";
 import "./Footer.css";
 
@@ -52,6 +53,18 @@ export const Footer: React.FC = () => {
               >
                 <LinkedinIcon size={15} aria-hidden="true" />
                 <span>LinkedIn</span>
+              </a>
+            )}
+            {profileData.whatsappUrl && (
+              <a
+                href={profileData.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+                title="Chat on WhatsApp"
+              >
+                <WhatsappIcon size={15} aria-hidden="true" />
+                <span>WhatsApp</span>
               </a>
             )}
             <a href={`mailto:${profileData.email}`} className="footer-link">

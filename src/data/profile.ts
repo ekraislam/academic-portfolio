@@ -9,6 +9,9 @@ export interface ProfileData {
   email: string;
   github: string;
   linkedin: string;
+  phone?: string;
+  whatsapp?: string;
+  whatsappUrl?: string;
   monogram: string;
   photoUrl?: string;
   cvUrl?: string;
@@ -25,6 +28,9 @@ export const profileData: ProfileData = {
   email: "ekraislamohi.academic@gmail.com",
   github: "https://github.com/ekraislam",
   linkedin: "https://www.linkedin.com/in/ekra-islam-ohi",
+  phone: "+880 1581-828741",
+  whatsapp: "+880 1581-828741",
+  whatsappUrl: "https://wa.me/8801581828741?text=Hello%20Ekra,%20I%20visited%20your%20academic%20portfolio",
   monogram: "EIO",
   photoUrl: photoUrl,
   cvUrl: cvUrl,

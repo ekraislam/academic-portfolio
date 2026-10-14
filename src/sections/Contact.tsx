@@ -2,18 +2,20 @@ import React, { useState } from "react";
 import { Mail, Copy, Check, ArrowUpRight, MessageSquareCode } from "lucide-react";
 import { GithubIcon } from "../components/GithubIcon";
 import { LinkedinIcon } from "../components/LinkedinIcon";
+import { WhatsappIcon } from "../components/WhatsappIcon";
 import { SectionHeading } from "../components/SectionHeading";
 import { profileData } from "../data/profile";
 import "./Contact.css";
 
 export const Contact: React.FC = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedWhatsApp, setCopiedWhatsApp] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(profileData.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2500);
     } catch {
       // Fallback if clipboard API is restricted
       const textArea = document.createElement("textarea");
@@ -22,8 +24,26 @@ export const Contact: React.FC = () => {
       textArea.select();
       document.execCommand("copy");
       document.body.removeChild(textArea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2500);
+    }
+  };
+
+  const handleCopyWhatsApp = async () => {
+    if (!profileData.whatsapp) return;
+    try {
+      await navigator.clipboard.writeText(profileData.whatsapp);
+      setCopiedWhatsApp(true);
+      setTimeout(() => setCopiedWhatsApp(false), 2500);
+    } catch {
+      const textArea = document.createElement("textarea");
+      textArea.value = profileData.whatsapp;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      setCopiedWhatsApp(true);
+      setTimeout(() => setCopiedWhatsApp(false), 2500);
     }
   };
 
@@ -67,7 +87,7 @@ export const Contact: React.FC = () => {
                   aria-label="Copy email address to clipboard"
                   title="Copy email address"
                 >
-                  {copied ? (
+                  {copiedEmail ? (
                     <>
                       <Check size={15} className="copied-icon" aria-hidden="true" />
                       <span>Copied!</span>
@@ -81,6 +101,58 @@ export const Contact: React.FC = () => {
                 </button>
               </div>
             </div>
+
+            {/* WhatsApp Direct Messaging Card */}
+            {profileData.whatsapp && (
+              <div className="contact-method-card contact-method-card--whatsapp">
+                <div className="contact-icon-box contact-icon-box--whatsapp">
+                  <WhatsappIcon size={22} aria-hidden="true" />
+                </div>
+                <div className="contact-method-info">
+                  <span className="contact-method-label">Direct Messaging &amp; WhatsApp</span>
+                  <a
+                    href={profileData.whatsappUrl || `https://wa.me/8801581828741`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-method-value"
+                  >
+                    {profileData.whatsapp}
+                  </a>
+                </div>
+                <div className="contact-method-actions">
+                  <a
+                    href={profileData.whatsappUrl || `https://wa.me/8801581828741`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary contact-action-btn contact-action-btn--whatsapp"
+                    title="Open WhatsApp chat"
+                  >
+                    <WhatsappIcon size={15} aria-hidden="true" />
+                    <span>Chat on WhatsApp</span>
+                    <ArrowUpRight size={13} aria-hidden="true" />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={handleCopyWhatsApp}
+                    className="btn btn-secondary contact-action-btn"
+                    aria-label="Copy WhatsApp number"
+                    title="Copy WhatsApp number"
+                  >
+                    {copiedWhatsApp ? (
+                      <>
+                        <Check size={15} className="copied-icon" aria-hidden="true" />
+                        <span>Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={15} aria-hidden="true" />
+                        <span>Copy Number</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* GitHub Card */}
             <div className="contact-method-card">
